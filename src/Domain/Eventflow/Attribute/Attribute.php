@@ -5,10 +5,13 @@ declare(strict_types=1);
 namespace Hexagonal\Domain\Eventflow\Attribute;
 
 /**
- * Class Attribute.
+ * Class Attribute
+ * @package Hexagonal\Domain\Eventflow\Attribute
  */
 abstract class Attribute
 {
+    use PropertyAccessTrait;
+
     /**
      * @var string|null
      */
