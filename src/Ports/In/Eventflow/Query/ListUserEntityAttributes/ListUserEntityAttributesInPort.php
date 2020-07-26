@@ -4,18 +4,18 @@ declare(strict_types=1);
 
 namespace Hexagonal\Ports\In\Eventflow\Query;
 
-use Hexagonal\Domain\Eventflow\Attribute\Attribute;
+use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output\Attributes;
 
 /**
  * Interface ListUserEntityAttributesUseCase
  * @package Hexagonal\Ports\In\Eventflow\Query
  */
-interface ListUserEntityAttributesUseCase
+interface ListUserEntityAttributesInPort
 {
     /**
      * @param int $userId
      * @param bool $followForeignKey
-     * @return Attribute[]
+     * @return Attributes
      */
-    public function list(int $userId, bool $followForeignKey = false): array;
+    public function list(int $userId, bool $followForeignKey = false): Attributes;
 }
