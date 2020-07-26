@@ -13,6 +13,11 @@ use SplFixedArray;
 class Attributes
 {
     /**
+     * @var int
+     */
+    private int $index;
+
+    /**
      * @var SplFixedArray
      */
     private SplFixedArray $attributes;
@@ -31,7 +36,7 @@ class Attributes
      */
     public function add(Attribute $attribute): void
     {
-        $this->attributes[] = $attribute;
+        $this->attributes[$this->index++] = $attribute;
     }
 
     /**
