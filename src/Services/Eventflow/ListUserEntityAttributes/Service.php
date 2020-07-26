@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes;
 
+use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\ListUserEntityAttributesInPort;
 use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output\Attributes;
-use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributesInPort;
-use Hexagonal\Ports\Out\Eventflow\ListUserEntityAttributesOutPort;
+use Hexagonal\Ports\Out\Eventflow\ListUserEntityAttributes\ListUserEntityAttributesOutPort;
 
 /**
  * Class ListUserEntityAttributesService

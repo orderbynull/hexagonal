@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Ports\In\Eventflow\Query;
+namespace Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes;
 
 use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output\Attributes;
 
 /**
- * Interface ListUserEntityAttributesUseCase
- * @package Hexagonal\Ports\In\Eventflow\Query
+ * Interface ListUserEntityAttributesInPort
+ * @package Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes
  */
 interface ListUserEntityAttributesInPort
 {
