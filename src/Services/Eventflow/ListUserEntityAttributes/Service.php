@@ -31,12 +31,12 @@ class Service implements ListUserEntityAttributesInPort
     /**
      * @inheritDoc
      */
-    public function list(int $userId, bool $followForeignKey = false): Attributes
+    public function list(int $userId, int $applicationId, bool $followForeignKey = false): Attributes
     {
         if ($followForeignKey) {
-            return $this->listUserEntityAttributes->topMostAndThroughForeignKey($userId);
+            return $this->listUserEntityAttributes->topMostAndThroughForeignKey($userId, $applicationId);
         } else {
-            return $this->listUserEntityAttributes->topMost($userId);
+            return $this->listUserEntityAttributes->topMost($userId, $applicationId);
         }
     }
 }

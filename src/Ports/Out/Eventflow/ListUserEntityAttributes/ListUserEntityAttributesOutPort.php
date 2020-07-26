@@ -14,13 +14,15 @@ interface ListUserEntityAttributesOutPort
 {
     /**
      * @param int $userId
+     * @param int $applicationId
      * @return Attributes
      */
-    public function topMost(int $userId): Attributes;
+    public function topMost(int $userId, int $applicationId): Attributes;
 
     /**
      * @param int $userId
+     * @param int $applicationId
      * @return Attributes
      */
-    public function topMostAndThroughForeignKey(int $userId): Attributes;
+    public function topMostAndThroughForeignKey(int $userId, int $applicationId): Attributes;
 }
