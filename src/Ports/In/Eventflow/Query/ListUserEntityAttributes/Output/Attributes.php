@@ -33,4 +33,12 @@ class Attributes
     {
         $this->attributes[] = $attribute;
     }
+
+    /**
+     * @return array
+     */
+    public function toArray(): array
+    {
+        return $this->attributes->toArray();
+    }
 }
