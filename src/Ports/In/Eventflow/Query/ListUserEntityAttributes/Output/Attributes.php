@@ -15,7 +15,7 @@ class Attributes
     /**
      * @var int
      */
-    private int $index;
+    private int $index = 0;
 
     /**
      * @var SplFixedArray
