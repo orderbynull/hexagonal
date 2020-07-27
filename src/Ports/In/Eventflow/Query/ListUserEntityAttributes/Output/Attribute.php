@@ -15,9 +15,9 @@ abstract class Attribute
     public $value;
 
     /**
-     * @var string|null
+     * @var string
      */
-    public ?string $id;
+    public string $id;
 
     /**
      * @var string
@@ -33,6 +33,11 @@ abstract class Attribute
      * @var string
      */
     public string $type;
+
+    /**
+     * @var int
+     */
+    public int $entityId;
 
     /**
      * @var bool

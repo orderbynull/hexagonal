@@ -5,12 +5,13 @@ declare(strict_types=1);
 namespace Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output;
 
 use SplFixedArray;
+use Traversable;
 
 /**
  * Class Attributes
  * @package Hexagonal\Domain\Eventflow\Attribute
  */
-class Attributes
+class Attributes implements \IteratorAggregate
 {
     /**
      * @var int
@@ -45,5 +46,13 @@ class Attributes
     public function toArray(): array
     {
         return $this->attributes->toArray();
+    }
+
+    /**
+     * @return Traversable|void
+     */
+    public function getIterator()
+    {
+        return $this->attributes;
     }
 }
