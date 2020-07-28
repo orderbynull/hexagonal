@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class EnumAttribute
+ * Class EnumAttributeMeta
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
-final class EnumAttribute extends Attribute
+final class EnumAttributeMeta extends AttributeMeta
 {
     /**
      * @Assert\NotBlank()

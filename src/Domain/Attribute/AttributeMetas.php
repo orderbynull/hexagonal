@@ -2,16 +2,17 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Domain\Attribute;
 
+use Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output\AttributeMeta;
 use SplFixedArray;
 use Traversable;
 
 /**
- * Class Attributes
- * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
+ * Class AttributeMetas
+ * @package Hexagonal\Domain\Attribute
  */
-class Attributes implements \IteratorAggregate
+class AttributeMetas implements \IteratorAggregate
 {
     /**
      * @var int
@@ -33,9 +34,9 @@ class Attributes implements \IteratorAggregate
     }
 
     /**
-     * @param Attribute $attribute
+     * @param AttributeMeta $attribute
      */
-    public function add(Attribute $attribute): void
+    public function add(AttributeMeta $attribute): void
     {
         $this->attributes[$this->index++] = $attribute;
     }

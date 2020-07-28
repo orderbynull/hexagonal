@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class IntegerAttribute
+ * Class IntegerAttributeMeta
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
-final class IntegerAttribute extends Attribute
+final class IntegerAttributeMeta extends AttributeMeta
 {
     /**
      * @Assert\NotBlank(allowNull=true)

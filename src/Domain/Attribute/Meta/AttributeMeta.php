@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output;
 
 use Symfony\Component\PropertyAccess\PropertyAccess;
 use Symfony\Component\Validator\Constraints as Assert;
@@ -10,10 +10,10 @@ use Symfony\Component\Validator\Exception\ValidationFailedException;
 use Symfony\Component\Validator\Validation;
 
 /**
- * Class Attribute
+ * Class AttributeMeta
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
-abstract class Attribute
+abstract class AttributeMeta
 {
     const ENUM = 'enum';
     const FILE = 'file';
@@ -66,12 +66,6 @@ abstract class Attribute
      * @var bool
      */
     protected bool $required;
-
-    /**
-     * @Assert\NotNull()
-     * @var bool
-     */
-    protected bool $allowedToEdit;
 
     /**
      * Attribute constructor.
@@ -218,21 +212,5 @@ abstract class Attribute
     public function setRequired(bool $required): void
     {
         $this->required = $required;
-    }
-
-    /**
-     * @return bool
-     */
-    public function isAllowedToEdit(): bool
-    {
-        return $this->allowedToEdit;
-    }
-
-    /**
-     * @param bool $allowedToEdit
-     */
-    public function setAllowedToEdit(bool $allowedToEdit): void
-    {
-        $this->allowedToEdit = $allowedToEdit;
     }
 }

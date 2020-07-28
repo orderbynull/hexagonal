@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class DateTimeAttribute
+ * Class DateTimeAttributeMeta
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
-final class DateTimeAttribute extends Attribute
+final class DateTimeAttributeMeta extends AttributeMeta
 {
     /**
      * @Assert\NotBlank()

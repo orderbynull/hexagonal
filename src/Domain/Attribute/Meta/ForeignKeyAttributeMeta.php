@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class ForeignKeyAttribute
+ * Class ForeignKeyAttributeMeta
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
-final class ForeignKeyAttribute extends Attribute
+final class ForeignKeyAttributeMeta extends AttributeMeta
 {
     /**
      * @Assert\NotBlank()

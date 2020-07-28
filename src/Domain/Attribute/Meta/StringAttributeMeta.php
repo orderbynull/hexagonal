@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributeMetas\Output;
 
 use Symfony\Component\Validator\Constraints as Assert;
 
 /**
- * Class StringAttribute
+ * Class StringAttributeMeta
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
-final class StringAttribute extends Attribute
+final class StringAttributeMeta extends AttributeMeta
 {
     /**
      * @Assert\NotBlank()
