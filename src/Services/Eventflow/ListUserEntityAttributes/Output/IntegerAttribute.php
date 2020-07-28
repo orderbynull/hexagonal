@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
 
+use Symfony\Component\Validator\Constraints as Assert;
+
 /**
  * Class IntegerAttribute
  * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
@@ -11,22 +13,90 @@ namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
 final class IntegerAttribute extends Attribute
 {
     /**
+     * @Assert\NotBlank(allowNull=true)
      * @var int|null
      */
-    public ?int $max;
+    protected ?int $max;
 
     /**
+     * @Assert\NotBlank(allowNull=true)
      * @var int|null
      */
-    public ?int $min;
+    protected ?int $min;
 
     /**
+     * @Assert\NotBlank()
      * @var int
      */
-    public int $default;
+    protected int $default;
 
     /**
+     * @Assert\NotNull()
      * @var bool
      */
-    public bool $unique;
+    protected bool $unique;
+
+    /**
+     * @return int|null
+     */
+    public function getMax(): ?int
+    {
+        return $this->max;
+    }
+
+    /**
+     * @param int|null $max
+     */
+    public function setMax(?int $max): void
+    {
+        $this->max = $max;
+    }
+
+    /**
+     * @return int|null
+     */
+    public function getMin(): ?int
+    {
+        return $this->min;
+    }
+
+    /**
+     * @param int|null $min
+     */
+    public function setMin(?int $min): void
+    {
+        $this->min = $min;
+    }
+
+    /**
+     * @return int
+     */
+    public function getDefault(): int
+    {
+        return $this->default;
+    }
+
+    /**
+     * @param int $default
+     */
+    public function setDefault(int $default): void
+    {
+        $this->default = $default;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isUnique(): bool
+    {
+        return $this->unique;
+    }
+
+    /**
+     * @param bool $unique
+     */
+    public function setUnique(bool $unique): void
+    {
+        $this->unique = $unique;
+    }
 }

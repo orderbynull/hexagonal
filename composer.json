@@ -8,7 +8,10 @@
   ],
   "require": {
     "php": "^7.4",
-    "symfony/property-access": "^5.1"
+    "symfony/property-access": "^5.1",
+    "symfony/validator": "^5.1",
+    "doctrine/annotations": "^1.10",
+    "doctrine/cache": "^1.10"
   },
   "autoload": {
     "classmap": [
