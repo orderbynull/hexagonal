@@ -44,7 +44,7 @@ abstract class AttributeMeta
     protected string $name;
 
     /**
-     * @Assert\NotBlank()
+     * @Assert\NotNull()
      * @var string
      */
     protected string $label;
