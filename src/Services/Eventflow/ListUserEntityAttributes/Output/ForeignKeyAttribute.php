@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
 
 /**
  * Class ForeignKeyAttribute
- * @package Hexagonal\Domain\Eventflow\Attribute
+ * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
 final class ForeignKeyAttribute extends Attribute
 {

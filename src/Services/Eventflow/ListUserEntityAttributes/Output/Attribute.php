@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
 
 use Symfony\Component\PropertyAccess\PropertyAccess;
 
 /**
  * Class Attribute
- * @package Hexagonal\Domain\Eventflow\Attribute
+ * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
 abstract class Attribute
 {

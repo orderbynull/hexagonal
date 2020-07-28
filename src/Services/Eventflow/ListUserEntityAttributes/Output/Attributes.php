@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output;
+namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output;
 
 use SplFixedArray;
 use Traversable;
 
 /**
  * Class Attributes
- * @package Hexagonal\Domain\Eventflow\Attribute
+ * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output
  */
 class Attributes implements \IteratorAggregate
 {

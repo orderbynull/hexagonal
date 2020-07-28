@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Hexagonal\Ports\Out\Eventflow\ListUserEntityAttributes;
 
-use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output\Attributes;
+use Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output\Attributes;
 
 /**
  * Interface ListUserEntityAttributesOutPort

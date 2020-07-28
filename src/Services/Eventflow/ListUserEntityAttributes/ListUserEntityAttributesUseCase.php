@@ -4,15 +4,15 @@ declare(strict_types=1);
 
 namespace Hexagonal\Services\Eventflow\ListUserEntityAttributes;
 
-use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\ListUserEntityAttributesInPort;
-use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributes\Output\Attributes;
+use Hexagonal\Ports\In\Eventflow\Query\ListUserEntityAttributesInPort;
 use Hexagonal\Ports\Out\Eventflow\ListUserEntityAttributes\ListUserEntityAttributesOutPort;
+use Hexagonal\Services\Eventflow\ListUserEntityAttributes\Output\Attributes;
 
 /**
- * Class ListUserEntityAttributesService
- * @package Hexagonal\Services\Eventflow
+ * Class ListUserEntityAttributesUseCase
+ * @package Hexagonal\Services\Eventflow\ListUserEntityAttributes
  */
-class Service implements ListUserEntityAttributesInPort
+class ListUserEntityAttributesUseCase implements ListUserEntityAttributesInPort
 {
     /**
      * @var ListUserEntityAttributesOutPort
