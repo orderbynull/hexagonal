@@ -15,6 +15,16 @@ use Symfony\Component\Validator\Validation;
  */
 abstract class Attribute
 {
+    const ENUM = 'enum';
+    const FILE = 'file';
+    const TEXT = 'text';
+    const STRING = 'string';
+    const BOOLEAN = 'boolean';
+    const INTEGER = 'integer';
+    const DECIMAL = 'decimal';
+    const DATETIME = 'date_time';
+    const FOREIGN_KEY = 'foreign_key';
+
     /**
      * @Assert\NotBlank(allowNull=true)
      * @var mixed
