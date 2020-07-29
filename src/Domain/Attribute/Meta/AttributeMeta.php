@@ -86,6 +86,24 @@ abstract class AttributeMeta
     }
 
     /**
+     * @return array
+     */
+    public function toArray(): array
+    {
+        $accessor = PropertyAccess::createPropertyAccessor();
+        $properties = array_keys(get_object_vars($this));
+        $array = [];
+
+        foreach ($properties as $property) {
+            if ($accessor->isReadable($this, $property)) {
+                $array[$property] = $accessor->getValue($this, $property);
+            }
+        }
+
+        return $array;
+    }
+
+    /**
      * @param array $properties
      *
      * @return $this
