@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Hexagonal\UseCases\Eventflow\Query;
 
 use Hexagonal\Domain\Attribute\Value\AttributeValue;
+use Hexagonal\Exceptions\AttributeValueException;
 use Hexagonal\Ports\In\Eventflow\Query\GetUserEntityAttributeValueInPort;
 use Hexagonal\Ports\Out\Eventflow\GetUserEntityAttributeValueOutPort;
 
@@ -33,9 +34,15 @@ class GetUserEntityAttributeValueUseCase implements GetUserEntityAttributeValueI
      * @param int $userId
      * @param string $attributeId
      * @return AttributeValue
+     * @throws AttributeValueException
      */
     public function get(int $applicationId, int $userId, string $attributeId): AttributeValue
     {
-        return $this->userEntityAttributeValue->get($applicationId, $userId, $attributeId);
+        $value = $this->userEntityAttributeValue->get($applicationId, $userId, $attributeId);
+        if (is_null($value)) {
+            throw new AttributeValueException("Missing value for attributeId={$attributeId}");
+        }
+
+        return $value;
     }
 }

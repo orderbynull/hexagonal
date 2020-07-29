@@ -16,7 +16,7 @@ interface GetUserEntityAttributeValueOutPort
      * @param int $applicationId
      * @param int $userId
      * @param string $attributeId
-     * @return AttributeValue
+     * @return AttributeValue|null
      */
-    public function get(int $applicationId, int $userId, string $attributeId): AttributeValue;
+    public function get(int $applicationId, int $userId, string $attributeId): ?AttributeValue;
 }
