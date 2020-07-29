@@ -29,12 +29,13 @@ class GetUserEntityAttributeValueUseCase implements GetUserEntityAttributeValueI
     }
 
     /**
+     * @param int $applicationId
      * @param int $userId
      * @param string $attributeId
      * @return AttributeValue
      */
-    public function get(int $userId, string $attributeId): AttributeValue
+    public function get(int $applicationId, int $userId, string $attributeId): AttributeValue
     {
-        return $this->userEntityAttributeValue->get($userId, $attributeId);
+        return $this->userEntityAttributeValue->get($applicationId, $userId, $attributeId);
     }
 }
