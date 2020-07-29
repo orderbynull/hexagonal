@@ -26,12 +26,6 @@ abstract class AttributeMeta
     const FOREIGN_KEY = 'foreign_key';
 
     /**
-     * @Assert\NotBlank(allowNull=true)
-     * @var mixed
-     */
-    protected $value;
-
-    /**
      * @Assert\NotBlank()
      * @var string
      */
@@ -118,22 +112,6 @@ abstract class AttributeMeta
         }
 
         return $this;
-    }
-
-    /**
-     * @return mixed
-     */
-    public function getValue()
-    {
-        return $this->value;
-    }
-
-    /**
-     * @param mixed $value
-     */
-    public function setValue($value): void
-    {
-        $this->value = $value;
     }
 
     /**
