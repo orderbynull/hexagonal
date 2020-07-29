@@ -39,8 +39,13 @@ class GetUserEntityAttributeValueUseCase implements GetUserEntityAttributeValueI
     public function get(int $applicationId, int $userId, string $attributeId): AttributeValue
     {
         $value = $this->userEntityAttributeValue->get($applicationId, $userId, $attributeId);
+
         if (is_null($value)) {
-            throw new AttributeValueException("Missing value for attributeId={$attributeId}");
+            throw new AttributeValueException(sprintf(
+                'Missing value for attributeId=%s in %s',
+                $attributeId,
+                __METHOD__
+            ));
         }
 
         return $value;
