@@ -13,16 +13,14 @@ use Hexagonal\Domain\Attribute\AttributeMetas;
 interface ListUserEntityAttributeMetasOutPort
 {
     /**
-     * @param int $userId
      * @param int $applicationId
      * @return AttributeMetas
      */
-    public function topMost(int $userId, int $applicationId): AttributeMetas;
+    public function topMost(int $applicationId): AttributeMetas;
 
     /**
-     * @param int $userId
      * @param int $applicationId
      * @return AttributeMetas
      */
-    public function topMostAndThroughForeignKey(int $userId, int $applicationId): AttributeMetas;
+    public function topMostAndThroughForeignKey(int $applicationId): AttributeMetas;
 }

@@ -31,12 +31,12 @@ class ListUserEntityAttributeMetasUseCase implements ListUserEntityAttributeMeta
     /**
      * @inheritDoc
      */
-    public function list(int $userId, int $applicationId, bool $followForeignKey = false): AttributeMetas
+    public function list(int $applicationId, bool $followForeignKey = false): AttributeMetas
     {
         if ($followForeignKey) {
-            return $this->listUserEntityAttributeMetas->topMostAndThroughForeignKey($userId, $applicationId);
+            return $this->listUserEntityAttributeMetas->topMostAndThroughForeignKey($applicationId);
         } else {
-            return $this->listUserEntityAttributeMetas->topMost($userId, $applicationId);
+            return $this->listUserEntityAttributeMetas->topMost($applicationId);
         }
     }
 }

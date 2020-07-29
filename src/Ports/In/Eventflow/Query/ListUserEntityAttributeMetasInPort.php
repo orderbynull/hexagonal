@@ -13,10 +13,9 @@ use Hexagonal\Domain\Attribute\AttributeMetas;
 interface ListUserEntityAttributeMetasInPort
 {
     /**
-     * @param int $userId
      * @param int $applicationId
      * @param bool $followForeignKey
      * @return AttributeMetas
      */
-    public function list(int $userId, int $applicationId, bool $followForeignKey = false): AttributeMetas;
+    public function list(int $applicationId, bool $followForeignKey = false): AttributeMetas;
 }
